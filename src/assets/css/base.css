@@ -1,0 +1,69 @@
+@import "./normalize.css";
+:root {
+    --color-text:#666;
+    --color-high-text:#ff5777;
+    --color-tint:#ff2147;
+    --color-background:#ff8197;
+    --font-size:14px;
+    --line-height:1.5;
+}
+/*：root ->  获取根元素  即html
+--color-tint  整体的背景颜色设置
+--css定义变量的语法*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei ","微软雅黑";
+    user-select: none; /*禁止用户鼠标在页面上选中图片、文字*/
+    -webkit-tap-highlight-color: transparent; /* webkit是苹果浏览器引擎，tap点击，height背景高亮，color颜色，颜色自己选择*/
+    background: var(--color-background);
+    color:var(--color-text);
+
+
+}
+a {
+    color:var(--color-text);
+    text-decoration: none;
+    /*
+    text-decoration: none删除下划线
+        在CSS中，使用text-decoration属性来定义段落文本的下划线、删除线和顶划线。
+        none即为默认值，可以用这个属性值也可以去掉已经有下划线或删除线或顶划线的样式
+
+        text-decoration是三个属性的缩写：text-decoration-line，text-decoration-color，text-decoration-style
+            1、text-decoration-line
+                定义：用来规定文本修饰要使用的线条类型。
+                取值：none，underline，line-through(规定文本中间将显示一条线)等等。
+            2、text-decoration-color
+                定义：用来规定文本修饰（下划线 underline、上划线 overline、中划线 line-through）的颜色。
+                取值：所有颜色表示法。
+            3、text-decoration-style
+                定义：用来规定线条如何显示。
+                取值：solid和double和dotted和dashed等等*/
+}
+
+.clear-fix::after{
+    clear:both;
+    content:'';
+    display:block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.clear-fix {
+    zoom:1;
+}
+
+.left{
+    float: left;
+}
+
+.right {
+    float:right;
+}
